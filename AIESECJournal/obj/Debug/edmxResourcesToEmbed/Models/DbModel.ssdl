@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JournalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Journal.dbo.JournalDaily' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="JournalDaily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="smallint" Nullable="false" />
+    <Property Name="Event" Type="nvarchar" MaxLength="50" />
+    <Property Name="Goal" Type="nvarchar" MaxLength="50" />
+    <Property Name="SuccessStory" Type="nvarchar" MaxLength="50" />
+    <Property Name="FailureStory" Type="nvarchar" MaxLength="50" />
+    <Property Name="Note" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="JournalModelStoreContainer">
+    <EntitySet Name="JournalDaily" EntityType="Self.JournalDaily" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [JournalDaily].[Id] AS [Id], 
+    [JournalDaily].[Event] AS [Event], 
+    [JournalDaily].[Goal] AS [Goal], 
+    [JournalDaily].[SuccessStory] AS [SuccessStory], 
+    [JournalDaily].[FailureStory] AS [FailureStory], 
+    [JournalDaily].[Note] AS [Note]
+    FROM [dbo].[JournalDaily] AS [JournalDaily]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

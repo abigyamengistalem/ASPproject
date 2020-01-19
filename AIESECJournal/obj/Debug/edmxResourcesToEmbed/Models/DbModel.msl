@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JournalModelStoreContainer" CdmEntityContainer="DbModels">
+    <EntitySetMapping Name="JournalDailies">
+      <EntityTypeMapping TypeName="JournalModel.JournalDaily">
+        <MappingFragment StoreEntitySet="JournalDaily">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Event" ColumnName="Event" />
+          <ScalarProperty Name="Goal" ColumnName="Goal" />
+          <ScalarProperty Name="SuccessStory" ColumnName="SuccessStory" />
+          <ScalarProperty Name="FailureStory" ColumnName="FailureStory" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
